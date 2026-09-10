@@ -6,7 +6,7 @@ Este projeto realiza o download, tratamento, correção e importação automáti
 ## Requisitos do Sistema
 
 - **Python:** Versão **3.11** (Recomendada para total compatibilidade com os pacotes utilitários)
-- **Base de Dados:** MySQL Server / MariaDB
+- **Base de Dados:** MySQL Server 
 - **Ambiente de Desenvolvimento:** VS Code ou qualquer IDE da sua preferência
 
 ---
