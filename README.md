@@ -104,12 +104,14 @@ Linux/macOS ou Git Bash: cp .env.example .env
 
 Abra o arquivo .env no seu editor de código e insira os dados de conexão da base de dados da nova máquina:
 
+```
 DB_HOST=ip_ou_host_do_servidor
 DB_PORT=3306
 DB_USER=seu_usuario
 DB_PASSWORD=sua_senha
 DB_NAME=seu_banco_de_dados
 DB_TABLE=db_GPGF
+```
 
 ## Executar o Projeto
 
