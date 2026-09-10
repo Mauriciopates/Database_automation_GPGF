@@ -1,0 +1,18 @@
+# Ambientes Virtuais e Cache Python
+venv/
+__pycache__/
+*.pyc
+
+# Configurações de IDE
+.vscode/
+
+# Pastas locais e downloads
+Download/
+Manutenção/
+
+# Arquivos de sistema
+desktop.ini
+.DS_Store
+
+# Variáveis de Ambiente e Segredos
+.env
