@@ -53,6 +53,7 @@ CREATE TABLE IF NOT EXISTS db_GPGF (
 
 ##  Estrutura de Arquivos
 
+```
 CPGF/
 ├── .env                  # Credenciais locais reais (NÃO SUBIR PRO GIT)
 ├── .env.example          # Modelo seguro de variáveis de ambiente
@@ -63,6 +64,7 @@ CPGF/
 ├── renomear_arquivos.py  # Padronização e exclusão de arquivos temporários
 ├── inserir_SQL.py        # Validação de colunas e importação em lote
 └── Download/             # Diretório local para os arquivos baixados (Ano/Mês)
+```
 
 ## Como executar o sistema
 
