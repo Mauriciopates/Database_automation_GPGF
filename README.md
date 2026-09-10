@@ -22,11 +22,12 @@ Este projeto realiza o download, tratamento, correção e importação automáti
 
 ---
 
+
 ## 🗄️ Esquema da Base de Dados (`esquema.sql`)
 
 A estrutura da tabela é gerada a partir do arquivo `esquema.sql`:
 
-```sql
+sql
 -- Arquivo: esquema.sql
 -- Criação da tabela para armazenamento dos dados de Cartão de Pagamento do Governo Federal (CPGF)
 
@@ -47,6 +48,8 @@ CREATE TABLE IF NOT EXISTS db_GPGF (
     valor_transacao DECIMAL(15, 2) NULL,
     data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+---
 
 ## 📁 Estrutura de Arquivos
 
@@ -81,7 +84,7 @@ python3.11 -m venv .venv
 # Ativar o ambiente virtual
 source .venv/bin/activate
 
---Dependências
+-- Dependências
 ./venv/Scripts/python.exe -m pip install python-dotenv pandas pymysql tqdm requests 
 
 ou se não tiver feito a criação do ambiente virtual (não orientado)
@@ -89,7 +92,7 @@ ou se não tiver feito a criação do ambiente virtual (não orientado)
 pip install pandas pymysql tqdm requests python-dotenv
 
 
--- Configurar as Variáveis de Ambiente (.env)
+# Configurar as Variáveis de Ambiente (.env)
 
 Por razões de segurança, o arquivo .env contendo senhas e acessos não é enviado para o repositório. Deve configurá-lo manualmente a partir do modelo .env.example:
 
@@ -108,7 +111,7 @@ DB_PASSWORD=sua_senha
 DB_NAME=seu_banco_de_dados
 DB_TABLE=db_GPGF
 
-## Executar o Projeto
+# Executar o Projeto
 
 python manutencao.py
 
