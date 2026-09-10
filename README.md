@@ -11,7 +11,7 @@ Este projeto realiza o download, tratamento, correção e importação automáti
 
 ---
 
-## 🛠️ Alterações e Evolução do Projeto
+## Alterações e Evolução do Projeto
 
 - **Segurança de Dados (.env):** Credenciais da base de dados protegidas via `python-dotenv` para evitar exposição no repositório Git.
 - **Estrutura de Base de Dados (`esquema.sql`):** Tabela padronizada para comportar colunas ajustadas em `snake_case` com tipos de dados otimizados (`DECIMAL`, `VARCHAR`, `TIMESTAMP`).
@@ -22,12 +22,11 @@ Este projeto realiza o download, tratamento, correção e importação automáti
 
 ---
 
-
-## 🗄️ Esquema da Base de Dados (`esquema.sql`)
+##  Esquema da Base de Dados (`esquema.sql`)
 
 A estrutura da tabela é gerada a partir do arquivo `esquema.sql`:
 
-sql
+```sql
 -- Arquivo: esquema.sql
 -- Criação da tabela para armazenamento dos dados de Cartão de Pagamento do Governo Federal (CPGF)
 
@@ -48,10 +47,11 @@ CREATE TABLE IF NOT EXISTS db_GPGF (
     valor_transacao DECIMAL(15, 2) NULL,
     data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+```
 
 ---
 
-## 📁 Estrutura de Arquivos
+##  Estrutura de Arquivos
 
 CPGF/
 ├── .env                  # Credenciais locais reais (NÃO SUBIR PRO GIT)
@@ -68,23 +68,23 @@ CPGF/
 
 -- No windows:
 
-# Criar o ambiente virtual na pasta .venv
+1 -  Criar o ambiente virtual na pasta .venv
 python -m venv .venv
 
-# Ativar o ambiente virtual (PowerShell)
+2 - Ativar o ambiente virtual (PowerShell)
 .\.venv\Scripts\Activate.ps1
 
-# Ativar o ambiente virtual (CMD)
+3 -  Ativar o ambiente virtual (CMD)
 .\.venv\Scripts\activate.bat
 
 -- No Linux / macOS:
-# Criar o ambiente virtual
+1 -  Criar o ambiente virtual
 python3.11 -m venv .venv
 
-# Ativar o ambiente virtual
+2 - Ativar o ambiente virtual
 source .venv/bin/activate
 
--- Dependências
+# Dependências
 ./venv/Scripts/python.exe -m pip install python-dotenv pandas pymysql tqdm requests 
 
 ou se não tiver feito a criação do ambiente virtual (não orientado)
@@ -111,7 +111,7 @@ DB_PASSWORD=sua_senha
 DB_NAME=seu_banco_de_dados
 DB_TABLE=db_GPGF
 
-# Executar o Projeto
+## Executar o Projeto
 
 python manutencao.py
 
